@@ -37,3 +37,10 @@ jobs:
           name: Which bundler?
           working_directory: ruby
           command: bundle install
+      - run:
+          name: Which bundler?
+          working_directory: ruby
+          command: |
+            bundle install    
+            bundle install
+            ruby beer-song/beer_song_test.rb
