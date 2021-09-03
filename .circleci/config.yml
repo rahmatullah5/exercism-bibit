@@ -32,7 +32,7 @@ jobs:
           name: Which bundler?
           working_directory: ~/ruby
           command: bundle -v
-      - ruby/bundle-install
+      # - ruby/bundle-install
       - run:
           name: Which bundler?
           working_directory: ~/ruby
