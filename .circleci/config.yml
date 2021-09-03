@@ -12,12 +12,12 @@ jobs:
       - run:
           name: Install bundler
           command: gem install bundler -v 2.2.19
-      # - run:
-      #     name: pwd
-      #     command: pwd
-      # - run:
-      #     name: ls
-      #     command: ls
+      - run:
+          name: pwd
+          command: pwd
+      - run:
+          name: ls
+          command: ls
       # - run:
       #     name: cd
       #     command: cd ruby
@@ -35,5 +35,5 @@ jobs:
       # - ruby/bundle-install
       - run:
           name: Which bundler?
-          working_directory: ~/ruby
+          working_directory: ruby
           command: ls
