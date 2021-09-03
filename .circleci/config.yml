@@ -40,9 +40,9 @@ jobs:
       - run:
           name: 1. Run test for Word count (Array.reduce) - Easy
           command: ruby ruby/word-count/word_count_test.rb
-      - run:
-          name: 2. Run test for Roman Numerals (transforming) - Easy
-          # command: ruby ruby/roman-numerals/roman_numerals_test.rb
+      # - run:
+      # name: 2. Run test for Roman Numerals (transforming) - Easy
+      # command: ruby ruby/roman-numerals/roman_numerals_test.rb
       - run:
           name: 3. Run test for Bob (control flow) - Easy (Done)
           command: ruby ruby/bob/bob_test.rb
