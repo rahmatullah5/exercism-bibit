@@ -36,4 +36,4 @@ jobs:
       - run:
           name: Which bundler?
           working_directory: ruby
-          command: ls
+          command: bundle install
