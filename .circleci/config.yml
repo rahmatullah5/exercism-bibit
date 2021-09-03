@@ -9,8 +9,12 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - pwd
-      - ls
+      - run:
+          name: pwd
+          command: pwd
+      - run:
+          name: ls
+          command: ls
       # - ruby/bundle-install
       # - run:
       #     name: Initialize Ruby Exercises
