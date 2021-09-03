@@ -9,23 +9,27 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - run:
-          name: pwd
-          command: pwd
-      - run:
-          name: ls
-          command: ls
-      - run:
-          name: cd
-          command: cd ruby
-      - run:
-          name: ls
-          command: ls
+      # - run:
+      #     name: pwd
+      #     command: pwd
+      # - run:
+      #     name: ls
+      #     command: ls
+      # - run:
+      #     name: cd
+      #     command: cd ruby
+      # - run:
+      #     name: ls
+      #     command: ls
       # - ruby/bundle-install
       # - run:
       #     name: Initialize Ruby Exercises
       #     command: pwd
-      # - run:
-      #     name: Which bundler?
-      #     command: bundle -v
-      # - ruby/bundle-install
+      - run:
+          name: Which bundler?
+          working_directory: ~/ruby
+          command: bundle -v
+      - run:
+          name: Which bundler?
+          working_directory: ~/ruby
+          command: ruby/bundle-install
