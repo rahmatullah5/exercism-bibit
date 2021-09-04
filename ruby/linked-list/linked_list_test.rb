@@ -6,7 +6,6 @@ class DequeTest < Minitest::Test
     deque = Deque.new
     deque.push(10)
     deque.push(20)
-    
     assert_equal 20, deque.pop
     assert_equal 10, deque.pop
   end

@@ -11,12 +11,12 @@ class Change
     c = arr.length - 1
     a = []
     while target != 0
-      if target - arr[c] < 0
+      if (target - arr[c]).negative?
         c -= 1
-      elsif target % arr[c] == 0
+      elsif (target % arr[c]).zero?
         a << arr[c]
         break
-      elsif target % arr[c] > 0
+      elsif (target % arr[c]).positive?
         a << arr[c]
         target -= arr[c]
         c -= 1
