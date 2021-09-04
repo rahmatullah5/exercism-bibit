@@ -34,9 +34,9 @@ jobs:
       - run:
           name: 5. Run test for Raindrops (conditionals) - Easy (Done)
           command: ruby ruby/raindrops/raindrops_test.rb
-      # - run:
-      # name: 6. Run test for Secret Handshake (binary) - Easy
-      # command: ruby ruby/secret-handshakes/secret_handshakes_test.rb
+      - run:
+          name: 6. Run test for Secret Handshake (binary) - Easy
+          command: ruby ruby/secret-handshakes/secret_handshakes_test.rb
       - run:
           name: 7. Run test for Flatten Array (recursion) - Easy (Done)
           command: ruby ruby/flatten-array/flatten_array_test.rb
