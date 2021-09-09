@@ -7,7 +7,26 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class FlattenArray
+  attr_accessor :new_arr
+
   def self.flatten(arr)
-    arr.flatten.compact
+    new.flatten(arr)
+  end
+
+  def initialize
+    @new_arr = []
+  end
+
+  def flatten(arr)
+    arr.each do |v|
+      next if v.nil?
+
+      if v.is_a? Array
+        flatten(v)
+      else
+        @new_arr << v
+      end
+    end
+    new_arr
   end
 end
