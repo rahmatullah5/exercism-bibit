@@ -5,7 +5,7 @@ Write your code for the 'Linked List' exercise in this file. Make the tests in
 To get started with TDD, see the `README.md` file in your
 `ruby/linked-list` directory.
 =end
-require 'pry'
+
 class ListNode
   attr_accessor :next
   attr_reader :data

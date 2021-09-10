@@ -6,7 +6,6 @@ To get started with TDD, see the `README.md` file in your
 `ruby/list-ops` directory.
 =end
 
-require 'pry'
 class ListOps
   def self.arrays(arr)
     counter = 0
