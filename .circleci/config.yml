@@ -19,10 +19,10 @@ jobs:
             bundle -v
             bundle install
       - run:
-          name: 1. Run test for Word count (Array.reduce) - Easy
+          name: 1. Run test for Word count (Array.reduce) - Easy (Done)
           command: ruby ruby/word-count/word_count_test.rb
       - run:
-          name: 2. Run test for Roman Numerals (transforming) - Easy
+          name: 2. Run test for Roman Numerals (transforming) - Easy (Done)
           command: ruby ruby/roman-numerals/roman_numerals_test.rb
       - run:
           name: 3. Run test for Bob (control flow) - Easy (Done)
@@ -34,7 +34,7 @@ jobs:
           name: 5. Run test for Raindrops (conditionals) - Easy (Done)
           command: ruby ruby/raindrops/raindrops_test.rb
       - run:
-          name: 6. Run test for Secret Handshake (binary) - Easy
+          name: 6. Run test for Secret Handshake (binary) - Easy (Done)
           command: ruby ruby/secret-handshake/secret_handshake_test.rb
       - run:
           name: 7. Run test for Flatten Array (recursion) - Easy (Done)
@@ -73,11 +73,62 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-
-      # specify any bash command here prefixed with `run: `
-      - run: mix deps.get
-      - run: mix ecto.create
-      - run: mix test
+      - run:
+          working_directory: elixir/word-count/
+          name: 1. Run test for Word count (Array.reduce) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/roman-numerals/
+          name: 2. Run test for Roman Numerals (transforming) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/bob/
+          name: 3. Run test for Bob (control flow) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/beer-song/
+          name: 4. Run test for Beer Song (range) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/raindrops/
+          name: 5. Run test for Raindrops (conditionals) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/secret-handshake/
+          name: 6. Run test for Secret Handshake (binary) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/flatten-array/
+          name: 7. Run test for Flatten Array (recursion) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/list-ops/
+          name: 8. Run test for List Ops (functional programming) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/change/
+          name: 9. Run test for Change (algorithms) - Medium
+          command: mix test
+      - run:
+          working_directory: elixir/robot-simulator/
+          name: 10. Run test for Robot simulator (concurrency) - Medium
+          command: mix test
+      - run:
+          working_directory: elixir/bank-account/
+          name: 11. Run test for Bank Account (OTP) - Medium
+          command: mix test
+      - run:
+          working_directory: elixir/gigasecond/
+          name: 12. Run test for Gigasecond (time-handling) - Easy
+          command: mix test
+      - run:
+          working_directory: elixir/clock/
+          name: 13. Run test for Clock (integer logic) - Medium
+          command: mix test
+      - run:
+          working_directory: elixir/markdown/
+          name: 14. Run test Markdown (refactoring) - Medium
+          command: mix test
 workflows:
   version: 2
   run_all_test:
