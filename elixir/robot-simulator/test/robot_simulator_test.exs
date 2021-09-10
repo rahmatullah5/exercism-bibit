@@ -1,6 +1,7 @@
 defmodule RobotSimulatorTest do
   use ExUnit.Case
 
+  @tag :pending
   test "create has sensible defaults" do
     robot = RobotSimulator.create()
     assert RobotSimulator.position(robot) == {0, 0}

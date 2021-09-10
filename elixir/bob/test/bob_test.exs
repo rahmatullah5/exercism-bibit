@@ -1,6 +1,7 @@
 defmodule BobTest do
   use ExUnit.Case
 
+  @tag :pending
   test "stating something" do
     assert Bob.hey("Tom-ay-to, tom-aaaah-to.") == "Whatever."
   end
