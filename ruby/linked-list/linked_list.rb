@@ -7,11 +7,12 @@ To get started with TDD, see the `README.md` file in your
 =end
 require 'pry'
 class ListNode
-  attr_accessor :data, :next
+  attr_accessor :next
+  attr_reader :data
 
-  def initialize(d = nil, n = nil)
-    @data = d
-    @next = n
+  def initialize(data = nil, next_node = nil)
+    @data = data
+    @next = next_node
   end
 end
 
