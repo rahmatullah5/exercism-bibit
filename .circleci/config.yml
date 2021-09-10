@@ -42,12 +42,12 @@ jobs:
       - run:
           name: 8. Run test for List Ops (functional programming) - Easy (Done)
           command: ruby ruby/list-ops/list_ops_test.rb
-      # - run:
-      # name: 9. Run test for Change (algorithms) - Medium
-      # command: ruby ruby/change/change_test.rb
-      # - run:
-      # name: 10. Run test for Binary Search Tree (recursion) - Medium
-      # command: ruby ruby/binary-search-tree/binary_search_tree_test.rb
+      - run:
+          name: 9. Run test for Change (algorithms) - Medium
+          command: ruby ruby/change/change_test.rb
+      - run:
+          name: 10. Run test for Binary Search Tree (recursion) - Medium
+          command: ruby ruby/binary-search-tree/binary_search_tree_test.rb
       - run:
           name: 11. Run test for Simple Linked List (arrays) - Medium  (Done)
           command: ruby ruby/linked-list/linked_list_test.rb
@@ -57,9 +57,9 @@ jobs:
       - run:
           name: 13. Run test for Clock (integer logic) - Medium (Done)
           command: ruby ruby/clock/clock_test.rb
-      # - run:
-      # name: 14. Run test for Robot simulator (concurrency) - Medium
-      # command: ruby ruby/robot-simulator/robot_simulator_test.rb
+      - run:
+          name: 14. Run test for Robot simulator (concurrency) - Medium
+          command: ruby ruby/robot-simulator/robot_simulator_test.rb
   elixir:
     docker:
       # specify the version here
