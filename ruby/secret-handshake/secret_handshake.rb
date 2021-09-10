@@ -7,8 +7,7 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class SecretHandshake
-  attr_reader :i
-  attr_accessor :arr
+  attr_reader :number
 
   SECRET_CODE = [
     'wink',
@@ -17,18 +16,17 @@ class SecretHandshake
     'jump'
   ].freeze
 
-  def initialize(i)
-    @i = i.to_s(2).to_i.digits unless i.is_a? String
-    @arr = []
+  def initialize(number)
+    @number = number.to_s(2).to_i.digits if number.is_a? Integer
   end
 
   def commands
-    return @arr if @i.nil?
+    return [] if @number.nil?
 
-    @arr = @i[0..3].each_with_index.map do |i, index|
+    arr = @number[0..3].each_with_index.map do |i, index|
       SECRET_CODE[index] if i != 0
     end.compact
 
-    @i.length > 4 ? @arr.reverse : @arr
+    @number.length > 4 ? arr.reverse : arr
   end
 end
