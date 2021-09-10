@@ -6,22 +6,40 @@ To get started with TDD, see the `README.md` file in your
 `ruby/bob` directory.
 =end
 class Bob
-  def self.hey(remark)
-    remark = remark.strip.gsub(/[^a-zA-Z0-9!?]/, '')
-    not_words = remark.scan(/([\w\d])/).length.zero?
-    capitalized = !remark.scan(/[A-Z]/).length.zero? && remark.upcase == remark
-    end_with_question_mark = remark.end_with? '?'
+  attr_reader :remark
 
-    if !capitalized && end_with_question_mark
+  def initialize(remark)
+    @remark = remark.strip.gsub(/[^a-zA-Z0-9!?]/, '')
+  end
+
+  def self.hey(remark)
+    new(remark).hey
+  end
+
+  def hey
+    if !capitalized? && end_with_question_mark?
       'Sure.'
-    elsif not_words
+    elsif does_not_contain_alphanumeric?
       'Fine. Be that way!'
-    elsif capitalized && end_with_question_mark
+    elsif capitalized? && end_with_question_mark?
       "Calm down, I know what I'm doing!"
-    elsif capitalized
+    elsif capitalized?
       "Whoa, chill out!"
     else
       'Whatever.'
     end
+  end
+
+  private
+  def capitalized?
+    !remark.scan(/[A-Z]/).length.zero? && remark.upcase == remark
+  end
+
+  def end_with_question_mark?
+    remark.end_with? '?'
+  end
+
+  def does_not_contain_alphanumeric?
+    remark.scan(/([\w\d])/).length.zero?
   end
 end
