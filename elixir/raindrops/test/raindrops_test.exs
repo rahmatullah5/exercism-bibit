@@ -1,7 +1,7 @@
 defmodule RaindropsTest do
   use ExUnit.Case
 
-  # @tag :pending
+  @tag :pending
   test "1" do
     assert Raindrops.convert(1) == "1"
   end

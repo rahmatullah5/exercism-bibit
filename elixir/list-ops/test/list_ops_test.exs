@@ -6,7 +6,7 @@ defmodule ListOpsTest do
   defp odd?(n), do: rem(n, 2) == 1
 
   describe "length" do
-    # @tag :pending
+    @tag :pending
     test "empty list" do
       assert L.length([]) == 0
     end

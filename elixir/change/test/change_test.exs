@@ -1,7 +1,7 @@
 defmodule ChangeTest do
   use ExUnit.Case
 
-  # @tag :pending
+  @tag :pending
   test "change for 1 cent" do
     coins = [1, 5, 10, 25]
     expected = [1]

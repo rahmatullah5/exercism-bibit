@@ -1,7 +1,7 @@
 defmodule FlattenArrayTest do
   use ExUnit.Case
 
-  # @tag :pending
+  @tag :pending
   test "no nesting" do
     assert FlattenArray.flatten([0, 1, 2]) ==
              [0, 1, 2]
