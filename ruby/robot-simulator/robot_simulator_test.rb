@@ -9,6 +9,7 @@ class RobotTurningTest < Minitest::Test
   end
 
   def test_robot_bearing
+    skip
     %i[east west north south].each do |direction|
       robot.orient(direction)
       assert_equal direction, robot.bearing
