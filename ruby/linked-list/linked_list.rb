@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 =begin
 Write your code for the 'Linked List' exercise in this file. Make the tests in
 `linked_list_test.rb` pass.
