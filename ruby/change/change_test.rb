@@ -4,12 +4,12 @@ require_relative 'change'
 # Common test data version: 1.3.0 258c807
 class ChangeTest < Minitest::Test
   def test_single_coin_change
-    # skip
+    skip
     assert_equal [25], Change.generate([1, 5, 10, 25, 100], 25)
   end
 
   def test_multiple_coin_change
-    # skip
+    skip
     assert_equal [5, 10], Change.generate([1, 5, 10, 25, 100], 15)
   end
 
